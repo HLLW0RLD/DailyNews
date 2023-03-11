@@ -6,4 +6,6 @@ class MainNewsFragment: Fragment() {
     companion object {
         fun newInstance() = MainNewsFragment()
     }
+
+
 }

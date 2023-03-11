@@ -1,9 +1,12 @@
 package com.example.dailynews.base
 
+import com.example.dailynews.db.NewsDAO
 import com.example.dailynews.remote.NewsApi
 import com.example.dailynews.remote.NewsInterface
+import com.example.dailynews.repository.LocalRepository
 import com.example.dailynews.repository.domain.IRemoteRepository
 import com.example.dailynews.repository.RemoteRepository
+import com.example.dailynews.repository.domain.ILocalRepository
 import com.example.dailynews.service.domain.ILocalService
 import com.example.dailynews.service.domain.IRemoteService
 import com.example.dailynews.service.LocalService
@@ -51,6 +54,14 @@ class AppComponents {
                         .setLenient()
                         .create()
                 )
+        }
+
+        single<ILocalRepository> {
+            LocalRepository(get())
+        }
+
+        single<NewsDAO> {
+            BaseApp.getUserDAO()
         }
     }
 }
