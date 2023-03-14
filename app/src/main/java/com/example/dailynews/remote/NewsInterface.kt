@@ -10,21 +10,21 @@ const val API_KEY = "d3444f1232f54da0b192955bb3045aa9"
 const val DEFAULT_Q = "news"
 interface NewsInterface {
 
-    @GET("/everything")
+    @GET("everything")
     fun getAllNews(
         @Query("q") q: String = DEFAULT_Q,
         @Query("apiKey") apiKey: String = API_KEY
     ): Single<Articles>
 
-    @GET("/everything")
+    @GET("everything")
     fun searchNews(
         @Query("q") q: String,
         @Query("apiKey") apiKey: String = API_KEY
     ): Single<Articles>
 
-    @GET("/top-headlines/")
+    @GET("top-headlines/")
     fun getNewsByCategory(
-        @Query("category") category: Categories,
+        @Query("category") category: String,
         @Query("apiKey") apiKey: String = API_KEY
     ): Single<Articles>
 }

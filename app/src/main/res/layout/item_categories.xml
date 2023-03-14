@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:singleLine="true"
+    app:singleSelection="true">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_business"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/business"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_entertainment"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entertainment"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_general"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/general"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_health"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_science"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/science"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_sports"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sports"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/cc_technology"
+        android:theme="@style/Theme.MaterialComponents.Bridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/technology"
+        android:checkable="true"
+        android:layout_gravity="center_vertical"/>
+
+</com.google.android.material.chip.ChipGroup>

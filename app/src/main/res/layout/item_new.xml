@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="3dp"
+    android:layout_marginHorizontal="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_dark_gray">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Liquidaciones en la cadena se aproximan a un mínimo de dos meses por la caída de ether - CoinDesk" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_news_pic"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_source_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:background="@drawable/ic_main_item_background_light_gray"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_news_pic"
+            app:layout_constraintEnd_toEndOf="@id/iv_news_pic"
+            tools:text="Engadget" />
+
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:background="@drawable/ic_main_item_background_light_gray"
+            app:layout_constraintTop_toTopOf="@id/iv_news_pic"
+            app:layout_constraintEnd_toEndOf="@id/iv_news_pic"
+            tools:text="Engadget" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_main_item_background_light_gray"
+            app:layout_constraintTop_toTopOf="@id/iv_news_pic"
+            app:layout_constraintEnd_toStartOf="@id/iv_save"
+            tools:text="Engadget" />
+
+      <!--  <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Regulator says Mark Steyn’s use of data to draw misleading conclusions breached impartiality guidelines GB News breached impartiality rules when the presenter Mark Steyn used official health data to draw misleading conclusions about the Covid-19 booster that" />
+-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

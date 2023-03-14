@@ -12,7 +12,7 @@ class RemoteService(private val remote: IRemoteRepository): IRemoteService {
         return remote.getAllNews()
     }
 
-    override fun getNewsByCategory(categories: Categories): Single<Articles> {
+    override fun getNewsByCategory(categories: String): Single<Articles> {
         return remote.getNewsByCategory(categories)
     }
 

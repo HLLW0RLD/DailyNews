@@ -10,7 +10,7 @@ class NewsApi(private val web: NewsInterface) {
         return web.getAllNews()
     }
 
-    fun getNewsByCategory(categories: Categories): Single<Articles> {
+    fun getNewsByCategory(categories: String): Single<Articles> {
         return web.getNewsByCategory(categories)
     }
 

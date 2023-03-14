@@ -12,7 +12,7 @@ class RemoteRepository(private val api: NewsApi): IRemoteRepository {
         return api.getAllNews()
     }
 
-    override fun getNewsByCategory(categories: Categories): Single<Articles> {
+    override fun getNewsByCategory(categories: String): Single<Articles> {
         return api.getNewsByCategory(categories)
     }
 

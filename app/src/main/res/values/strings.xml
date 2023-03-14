@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DailyNews</string>
+
+    <!-- Main page -->
+    <string name="daily_news">Daily <font color='#FF0000'>News</font></string>
+    <string name="find_news">Find news</string>
+    <string name="business">Business</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="general">General</string>
+    <string name="health">Health</string>
+    <string name="science">Science</string>
+    <string name="sports">Sports</string>
+    <string name="technology">Technology</string>
 </resources>
