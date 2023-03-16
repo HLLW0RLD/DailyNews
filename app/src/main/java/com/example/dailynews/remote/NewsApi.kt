@@ -11,7 +11,7 @@ class NewsApi(private val web: NewsInterface) {
     }
 
     fun getNewsByCategory(categories: String): Single<Articles> {
-        return web.getNewsByCategory(categories)
+        return web.getNewsByCategory(category = categories)
     }
 
     fun searchNews(q: String): Single<Articles> {

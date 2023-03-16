@@ -4,6 +4,7 @@
     <!-- Main page -->
     <string name="daily_news">Daily <font color='#FF0000'>News</font></string>
     <string name="find_news">Find news</string>
+    <string name="all">All</string>
     <string name="business">Business</string>
     <string name="entertainment">Entertainment</string>
     <string name="general">General</string>

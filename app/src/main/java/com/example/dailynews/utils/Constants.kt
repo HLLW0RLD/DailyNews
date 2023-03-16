@@ -21,5 +21,5 @@ object Constants {
     const val LOCAL_SERVICE_TAG = "local_service_tag"
     //Fragments tag
     const val MAIN_NEWS_TAG = "main_news_tag"
-    const val DETAILS_TAG = "details_tag"
+    const val FAVORITES_TAG = "favorites_tag"
 }

@@ -1,7 +1,6 @@
 package com.example.dailynews.service.domain
 
 import com.example.dailynews.data.Articles
-import com.example.dailynews.data.Categories
 import io.reactivex.rxjava3.core.Single
 
 interface IRemoteService {

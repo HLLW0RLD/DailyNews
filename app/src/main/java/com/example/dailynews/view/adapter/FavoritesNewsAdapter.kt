@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.dailynews.data.News
-import com.example.dailynews.databinding.ItemNewBinding
+import com.example.dailynews.databinding.ItemFavoritesNewsBinding
 
-class MainNewsAdapter : RecyclerView.Adapter<MainNewsAdapter.MainViewHolder>() {
+class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewHolder>() {
 
     private var newsData: List<News> = listOf()
     private var onItemClickListener: (News) -> Unit = {}
     private var onShareClickListener: (News) -> Unit = {}
-    private var onSaveClickListener: (News) -> Unit = {}
+    private var onDeleteClickListener: (News) -> Unit = {}
 
     fun setOnItemClickListener(onItemClickListener: (News) -> Unit) {
         this.onItemClickListener = onItemClickListener
@@ -23,17 +23,13 @@ class MainNewsAdapter : RecyclerView.Adapter<MainNewsAdapter.MainViewHolder>() {
         this.onShareClickListener = onShareClickListener
     }
 
-    fun setOnSaveClickListener(onSaveClickListener: (News) -> Unit) {
-        this.onSaveClickListener = onSaveClickListener
-    }
-
     fun setData(data: List<News>) {
         newsData = data
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        val binding = ItemNewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemFavoritesNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MainViewHolder(binding)
     }
 
@@ -45,7 +41,7 @@ class MainNewsAdapter : RecyclerView.Adapter<MainNewsAdapter.MainViewHolder>() {
         return newsData.size
     }
 
-    inner class MainViewHolder(val binding: ItemNewBinding) :
+    inner class MainViewHolder(val binding: ItemFavoritesNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(news: News) {
             binding.apply {
@@ -60,9 +56,6 @@ class MainNewsAdapter : RecyclerView.Adapter<MainNewsAdapter.MainViewHolder>() {
                 }
                 ivShare.setOnClickListener {
                     onShareClickListener(news)
-                }
-                ivSave.setOnClickListener {
-                    onSaveClickListener(news)
                 }
             }
         }
