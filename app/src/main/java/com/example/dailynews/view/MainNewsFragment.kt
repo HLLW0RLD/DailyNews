@@ -48,6 +48,7 @@ class MainNewsFragment : Fragment(), KoinComponent {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+            icgCategories.ccAll.isChecked = true
             web = wvMain
             web.hide()
 
