@@ -23,6 +23,10 @@ class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewH
         this.onShareClickListener = onShareClickListener
     }
 
+    fun setOnDeleteClickListener(onDeleteClickListener: (News) -> Unit) {
+        this.onDeleteClickListener = onDeleteClickListener
+    }
+
     fun setData(data: List<News>) {
         newsData = data
         notifyDataSetChanged()
@@ -57,6 +61,9 @@ class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewH
                 ivShare.setOnClickListener {
                     onShareClickListener(news)
                 }
+              /*  ivDelete.setOnClickListener {
+                    onDeleteClickListener(news)
+                }*/
             }
         }
     }

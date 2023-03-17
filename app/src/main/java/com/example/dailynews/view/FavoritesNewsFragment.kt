@@ -71,6 +71,10 @@ class FavoritesNewsFragment: Fragment() {
             setOnShareClickListener {
                 shareNews(it)
             }
+
+            /*setOnDeleteClickListener {
+                deleteFromFavorites(it)
+            }*/
         }
 
         viewModel.newsData.observe(viewLifecycleOwner) { observeNewsData(it) }
@@ -91,10 +95,10 @@ class FavoritesNewsFragment: Fragment() {
         Helper.copyToClipBoard(news.url)
     }
 
-//    private fun deleteFromFavorites(news: News) {
-//        viewModel.deleteFromFavorites(news)
-//        Helper.toastShort("Deleted from favorites")
-//    }
+/*    private fun deleteFromFavorites(news: News) {
+        viewModel.deleteFromFavorites(news)
+        Helper.toastShort("Deleted from favorites")
+    }*/
 
     private fun observeNewsData(data: AppState) {
         when (data) {

@@ -63,6 +63,17 @@
             app:layout_constraintTop_toTopOf="@id/iv_news_pic"
             app:layout_constraintEnd_toEndOf="@id/iv_news_pic"/>
 
+       <!-- <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_main_item_background_light_gray"
+            app:layout_constraintTop_toTopOf="@id/iv_news_pic"
+            app:layout_constraintEnd_toStartOf="@id/iv_share"/>
+-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
