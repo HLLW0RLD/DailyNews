@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class NewsEntity(
-    @PrimaryKey()
+    @PrimaryKey(autoGenerate = true)
     val id: Long,
     val source: String,
     val author: String?,
@@ -14,5 +14,6 @@ data class NewsEntity(
     val url: String,
     val urlToImage: String?,
     val publishedAt: String,
-    val content: String
+    val content: String,
+    val timestamp: Long
 )

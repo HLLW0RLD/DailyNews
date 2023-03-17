@@ -3,14 +3,11 @@ package com.example.dailynews.viewModel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.dailynews.data.News
-import com.example.dailynews.db.NewsEntity
 import com.example.dailynews.repository.domain.ILocalRepository
 import com.example.dailynews.utils.AppState
 import com.example.dailynews.utils.Constants
 import com.example.dailynews.utils.Helper
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.subscribeBy
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -35,19 +32,19 @@ class FavoritesNewsViewModel: ViewModel(), KoinComponent {
                         newsData.postValue(
                             AppState.Success(Helper.convertEntitiesToModel(it))
                         )
-                        Log.d(Constants.FAVORITES_TAG, "vm getFavoritesNews() -> $it")
+                        Log.d(Constants.FAVORITES_NEWS_TAG, "vm getFavoritesNews() -> $it")
                     },
                     onError = {
-                        Log.d(Constants.FAVORITES_TAG, "vm getFavoritesNews() \ne -> $it")
+                        Log.d(Constants.FAVORITES_NEWS_TAG, "vm getFavoritesNews() \ne -> $it")
                     }
                 )
         )
     }
 
-//    override fun onCleared() {
-//        disposable.clear()
-//        super.onCleared()
-//    }
+    override fun onCleared() {
+        disposable.clear()
+        super.onCleared()
+    }
 
     /*private fun deleteFromDB(news: News){
         Single.just(news)

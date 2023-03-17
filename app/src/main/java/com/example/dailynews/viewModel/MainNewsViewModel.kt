@@ -18,6 +18,7 @@ import io.reactivex.rxjava3.kotlin.subscribeBy
 import io.reactivex.rxjava3.schedulers.Schedulers
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import java.util.*
 
 class MainNewsViewModel: ViewModel(), KoinComponent {
 
@@ -95,7 +96,7 @@ class MainNewsViewModel: ViewModel(), KoinComponent {
             .toObservable()
             .subscribeBy (
                 onNext = {
-                    local.insert(NewsEntity(
+                    val entity = NewsEntity(
                         id = 0,
                         source = news.source.name,
                         author = news.author,
@@ -104,9 +105,11 @@ class MainNewsViewModel: ViewModel(), KoinComponent {
                         url = news.url,
                         urlToImage = news.urlToImage,
                         publishedAt = news.publishedAt,
-                        content = news.content
-                    ))
-                    Log.d(MAIN_NEWS_TAG, "vm saveToDB() -> $it")
+                        content = news.content,
+                        timestamp = Date().time
+                    )
+                    local.insert(entity)
+                    Log.d(MAIN_NEWS_TAG, "vm saveToDB() -> $entity")
                 },
                 onError = {
                     Log.d(MAIN_NEWS_TAG, "vm saveToDB() -> $it")

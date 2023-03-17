@@ -14,7 +14,7 @@ interface NewsDAO {
     @Insert(onConflict = IGNORE)
     fun insert(entity: NewsEntity)
 
-    @Query("SELECT * FROM NewsEntity")
+    @Query("SELECT * FROM NewsEntity ORDER BY timestamp DESC")
     fun all(): Observable<List<NewsEntity>>
 
     @Query("SELECT * FROM NewsEntity WHERE title LIKE :title")
