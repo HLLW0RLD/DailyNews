@@ -48,46 +48,4 @@ class FavoritesNewsViewModel : ViewModel(), KoinComponent {
         disposable.clear()
         super.onCleared()
     }
-
-    /*private fun deleteFromDB(news: NewsEntity) {
-        Single.just(news)
-            .subscribeOn(Schedulers.io())
-            .toObservable()
-            .subscribeBy(
-                onNext = {
-                    local.delete(
-                        NewsEntity(
-                            id = 0,
-                            source = news.source,
-                            author = news.author,
-                            title = news.title,
-                            description = news.description,
-                            url = news.url,
-                            urlToImage = news.urlToImage,
-                            publishedAt = news.publishedAt,
-                            content = news.content,
-                            timestamp = news.timestamp
-                        )
-                    )
-                    Log.d(Constants.FAVORITES_NEWS_TAG, "vm deleteFromDB() -> $it")
-                }
-            )
-    }
-
-    fun deleteFromFavorites(news: News) {
-        disposable.add(
-            local
-                .getNewsByTitle(news.title)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeBy(
-                    onSuccess = {
-                        deleteFromDB(it)
-                    },
-                    onError = {
-                        Log.d(Constants.FAVORITES_NEWS_TAG, "vm deleteFromFavorites() -> $it")
-                    }
-                )
-        )
-    }*/
 }

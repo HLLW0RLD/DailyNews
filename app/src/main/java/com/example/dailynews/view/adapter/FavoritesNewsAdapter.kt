@@ -13,7 +13,6 @@ class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewH
     private var newsData: List<News> = listOf()
     private var onItemClickListener: (News) -> Unit = {}
     private var onShareClickListener: (News) -> Unit = {}
-    private var onDeleteClickListener: (News) -> Unit = {}
 
     fun setOnItemClickListener(onItemClickListener: (News) -> Unit) {
         this.onItemClickListener = onItemClickListener
@@ -21,10 +20,6 @@ class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewH
 
     fun setOnShareClickListener(onShareClickListener: (News) -> Unit) {
         this.onShareClickListener = onShareClickListener
-    }
-
-    fun setOnDeleteClickListener(onDeleteClickListener: (News) -> Unit) {
-        this.onDeleteClickListener = onDeleteClickListener
     }
 
     fun setData(data: List<News>) {
@@ -61,9 +56,6 @@ class FavoritesNewsAdapter : RecyclerView.Adapter<FavoritesNewsAdapter.MainViewH
                 ivShare.setOnClickListener {
                     onShareClickListener(news)
                 }
-              /*  ivDelete.setOnClickListener {
-                    onDeleteClickListener(news)
-                }*/
             }
         }
     }
